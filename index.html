@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="overlay" id="overlay"></div>
+  <header>
+    <nav class="navbar">
+      <div class="nav-left">
+        <img src="./images/logo.svg" alt="logo" class="logo" alt="menu icon">
+        <ul class="nav-links">
+          <li class="dropdown">
+            <span>Features <img class="arrow" src="./images/icon-arrow-down.svg"></span>
+            <ul class="dropdown-menu">
+              <li><img src="./images/icon-todo.svg"> Todo List</li>
+              <li><img src="./images/icon-calendar.svg"> Calendar</li>
+              <li><img src="./images/icon-reminders.svg"> Reminders</li>
+              <li><img src="./images/icon-planning.svg"> Planning</li>
+            </ul>
+          </li>
+
+          <li class="dropdown">
+            <span>Company <img class="arrow" src="./images/icon-arrow-down.svg"></span>
+            <ul class="dropdown-menu">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+          </li>
+          <li>Careers</li>
+          <li>About</li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <a href="#">Login</a>
+        <button class="register-btn">Register</button>
+      </div>
+      <img src="./images/icon-menu.svg" class="menu-icon" id="openMenu" alt="menu icon">
+    </nav>
+  </header>
+
+  <!-- dupliacte of mobile menu cuz its the only way i could get it to work ;-; -->
+  <div class="mobile-menu" id="mobileMenu"> 
+    <img src="./images/icon-close-menu.svg" class="close-icon" id="closeMenu" alt="close icon for menu">
+
+    <ul class="mobile-links">
+      <li class="dropdown">
+        <span>Features <img class="arrow" src="./images/icon-arrow-down.svg"></span>
+        <ul class="dropdown-menu">
+          <li><img src="./images/icon-todo.svg"> Todo List</li>
+          <li><img src="./images/icon-calendar.svg"> Calendar</li>
+          <li><img src="./images/icon-reminders.svg"> Reminders</li>
+          <li><img src="./images/icon-planning.svg"> Planning</li>
+        </ul>
+      </li>
+
+      <li class="dropdown">
+        <span>Company <img class="arrow" src="./images/icon-arrow-down.svg"></span>
+        <ul class="dropdown-menu">
+          <li>History</li>
+          <li>Our Team</li>
+          <li>Blog</li>
+        </ul>
+      </li>
+
+      <li>Careers</li>
+      <li>About</li>
+    </ul>
+
+    <div class="mobile-auth">
+      <a href="#">Login</a>
+      <button class="register-btn">Register</button>
+    </div>
+  </div>
+
+  <main class="hero-container">
+    <div class="hero-text">
+      <h1>Make remote work</h1>
+      <p>
+        Get your team in sync, no matter your location.
+        Streamline processes, create team rituals, and
+        watch productivity soar.
+      </p>
+
+      <button class="learn-btn">Learn more</button>
+
+      <div class="logos">
+        <img src="./images/client-databiz.svg" alt="databiz logo">
+        <img src="./images/client-audiophile.svg" alt="audiophilr logo">
+        <img src="./images/client-meet.svg" alt="client meet logo">
+        <img src="./images/client-maker.svg" alt="client marker logo">
+      </div>
+    </div>
+
+    <div class="hero-image">
+      <img src="./images/image-hero-desktop.png" alt="image of guy with shapes">
+    </div>
+    
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Evan Snider</a>.
+    </div>
+  </main>
+<script src="script.js"></script>
+</body>
+</html>

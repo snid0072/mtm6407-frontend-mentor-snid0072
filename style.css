@@ -1,0 +1,299 @@
+body {
+  font-family: 'Epilogue', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fafafa;
+}
+.attribution {
+    display: none;
+}
+
+/* navbar stuff */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.logo {
+  width: 80px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.nav-links li {
+  cursor: pointer;
+  position: relative;
+  color: #6b6b6b;
+}
+.nav-links li:hover {
+  color: black;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-right a {
+  text-decoration: none;
+  color: #6b6b6b;
+}
+
+.nav-right a:hover {
+  color: black;
+}
+
+.register-btn {
+  padding: 8px 18px;
+  border-radius: 10px;
+  border: 1px solid black;
+  background: transparent;
+  cursor: pointer;
+}
+
+.register-btn:hover {
+  background: black;
+  color: white;
+}
+
+/* hero section stuff*/
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 120px;
+  min-height: 80vh;
+}
+
+.hero-text {
+  max-width: 500px;
+  margin-top: 40px;
+  margin-left: 10rem
+}
+
+.hero-text h1 {
+  font-size: 80px;
+  margin-bottom: 20px;
+  line-height: 1.1;
+}
+
+.hero-text p {
+  color: #6b6b6b;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-size: 20px;
+}
+
+.learn-btn {
+  background: black;
+  color: white;
+  padding: 18px 35px;
+  border-radius: 10px;
+  border: none;
+  margin-bottom: 100px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.learn-btn:hover {
+  background: white;
+  color: black;
+  border: 1px solid black;
+}
+.logos {
+  display: flex;
+  gap: 30px;
+}
+
+.logos img {
+  height: 25px;
+  width: auto;
+}
+
+/* images */
+.hero-image img {
+  width: 450px;
+  max-width: 100%;
+  padding-right: 10rem
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.arrow {
+  width: 10px;
+  transition: 0.3s;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  background: white;
+  padding: 20px 25px;
+  border-radius: 12px;
+  display: none;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+  min-width: 180px;
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 12px 0;
+  white-space: nowrap;
+}
+
+.dropdown.active .dropdown-menu {
+  display: block;
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* overlay (couldnt get perfect) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  z-index: 150;
+
+}
+.overlay.active {
+  display: block;
+}
+
+/* mobile menu */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 260px;
+  height: 100%;
+  background: white;
+  padding: 25px;
+  transition: 0.3s;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-menu.active {
+  right: 0;
+}
+.close-icon {
+  width: 25px;
+  align-self: flex-end;
+  cursor: pointer;
+  margin-bottom: 30px;
+}
+
+/* links on mobile */
+.mobile-links {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-links li {
+  margin: 18px 0;
+  color: #6b6b6b;
+}
+
+/* dropdown IN mobile */
+.mobile-links .dropdown-menu {
+  position: static;
+  box-shadow: none;
+  padding: 10px 0 0 20px;
+}
+
+/* mobile auth stuff */
+.mobile-auth {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.mobile-auth a {
+  text-align: center;
+  text-decoration: none;
+  color: #6b6b6b;
+}
+.mobile-auth button {
+  width: 100%;
+  height: 3rem;
+}
+
+/* the hamburger */
+.menu-icon {
+  display: none;
+  width: 30px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links,
+  .nav-right {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+  .logos {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  .hero-text {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-text h1 {
+    font-size: 40px;
+    text-align: center;
+  }
+  .hero-text p {
+    text-align: center;
+  }
+  .hero-image img {
+    width: 300px;
+    padding: 0;
+    margin: 0 auto;
+    display: block;
+  }
+}
